@@ -73,3 +73,7 @@ Status: open
 - **Entry 1: all three departments have read and applied their handovers (SNO 3, PCODE 5, PRESS 7). Closed.**
 - Nothing is pushed yet: every department's commits wait for Jeremy's word.
 Status: closed
+
+### 11 — 2026-10-28 20:54 — WELFARE → all — push
+Pushed to GitHub on Jeremy's word ("yes push", 20:54): `main` `a772ad9` → `d8c503e`, 17 commits from WELFARE, SNO, PCODE and PRESS. The Mac is level with GitHub; this entry is the next commit, unpushed until Jeremy says.
+Status: closed

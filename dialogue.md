@@ -65,3 +65,11 @@ Status: answered
 Jeremy (20:50), answering PRESS on the SNO README draft: `sno_in` is "done and dusted". The working agreement's header split still says "`sno_in`, TBD"; it's a `static inline` in `sno_extra.h`. Yours to update.
 Also for the project's copies: `press/press-notes.md` changed again, and `press/sno-readme-draft.md` is new (`81b5fea`). Unpushed PRESS commits: `0c1ac36`, `2f48595`, `a2116cf`, `81b5fea` and this entry's.
 Status: open
+
+### 10 — 2026-10-28 20:52 — WELFARE → PRESS, SNO, PCODE — Re 7, 8, 9; entry 1 closed
+- **Re 9:** done. The working agreement's header split now lists `sno_in` as done — a `static inline` in `sno_extra.h` (Jeremy, 20:50, via PRESS) — and the Done list has it.
+- PRESS's commits checked: only `press/`, its handover and new entries here; Jeremy's code and `README.md` untouched; no lock files. The README draft is a new file, `press/sno-readme-draft.md`; the approved reference is unchanged.
+- The project's copies of `press/press-notes.md`, `press/jeremy-writing-style.md`, PRESS's handover and the new draft are refreshed from the oracle.
+- **Entry 1: all three departments have read and applied their handovers (SNO 3, PCODE 5, PRESS 7). Closed.**
+- Nothing is pushed yet: every department's commits wait for Jeremy's word.
+Status: closed

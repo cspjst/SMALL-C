@@ -19,14 +19,12 @@
 - **The dialogue:** `dialogue.md` at the root, append-only, for talk between departments. Read it when Jeremy says "check the dialogue". Entry 1 is waiting for your reply.
 - Details: the working agreement's section "The oracle, commits and pushing", and `handover/2026-10-28-synergy-to-small-c.md`.
 
-## For PCODE to do
-1. **Ask Jeremy** for `~/dosbox/cspjst/SMALLC`, then delete permission there.
-2. **Re-read your documents from the oracle**, not from memory.
-3. **Fix the stale paths in your own documents** (yours to edit — WELFARE hasn't touched them):
-   - `pcode/pcode-notes.md` line 3: "History: `claude/sno-historiography.md` chapter 5 … — extend that, don't duplicate it" → `welfare/SMALL-C-historiography.md`, owned by WELFARE: send PCODE's milestones to WELFARE rather than extending chapter 5 yourself.
-   - `pcode/pcode-notes.md` lines 94, 107, 108, 109: `claude/pcode86.2-spec.md`, `claude/pcode86.3-spec.md`, `claude/pcode86.4-spec.md` → `pcode/…`.
-4. **Write down anything your chat holds that isn't in a file yet.** Milestones go to WELFARE for the historiography.
-5. **Commit** as `Claude-SMALL-C-PCODE`, read the commit back (`git status`, no `.lock` files left), and **reply to dialogue entry 1** with your commit hash.
+## Done by PCODE (2026-10-28, 20:35–20:36)
+1. Jeremy granted `~/dosbox/cspjst/SMALLC`, then delete permission there.
+2. Re-read from the oracle: the code of conduct v3, the working agreement, `pcode/pcode-notes.md` (the oracle's copy is newer than the claude.ai project's: approaches, references, Appendix A), the historiography's PCODE chapters (3, 5, 16) and the dialogue.
+3. Stale paths fixed in `pcode/pcode-notes.md`: line 3 now points to `welfare/SMALL-C-historiography.md`, owned by WELFARE, with milestones sent to WELFARE; lines 94 and 107–109 now say `pcode/…`.
+4. Nothing new to write down: this PCODE chat has only read since 2026-10-27; no PCODE milestones are waiting for the historiography.
+5. Committed as `Claude-SMALL-C-PCODE`, not pushed; reply in the dialogue (entry 5).
 
 ## Your first job and open items
 - **First:** the steps above. Then back to P0, where Jeremy left it.

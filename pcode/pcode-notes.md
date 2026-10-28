@@ -1,6 +1,6 @@
 # PCODE — department notes
 
-*Owned by PCODE. Read after `welfare/code-of-conduct.md`. Learning notes, **not a spec** (Jeremy, 2026-10-23: "pls dont build a spec this is for my learning"). Jeremy's files win over anything recorded here. History: `claude/sno-historiography.md` chapter 5 (P86.1 → 86.4 → back to P0) — extend that, don't duplicate it.*
+*Owned by PCODE. Read after `welfare/code-of-conduct.md`. Learning notes, **not a spec** (Jeremy, 2026-10-23: "pls dont build a spec this is for my learning"). Jeremy's files win over anything recorded here. History: `welfare/SMALL-C-historiography.md` chapter 5 (P86.1 → 86.4 → back to P0), owned by WELFARE — send PCODE's milestones to WELFARE (dialogue or handover) rather than extending it here.*
 
 *Source chat: "Abstract machine design for C compiler" (2026-10-22 22:41 – 2026-10-27), deleted on 2026-10-27. Everything from it worth keeping is here, in the four P86 specs, or in the historiography (chapters 3, 5, 16).*
 
@@ -91,7 +91,7 @@ end start
 ## Runtime `sys.asm`
 - `__sysN`, declared `public`; the program declares `extrn __sysN:near`.
 - Arguments pushed right to left, first argument at `[bp+4]`; result in AX; caller removes the arguments.
-- Service numbers as `claude/pcode86.4-spec.md`: 0 EXIT, 1 PUTC, 2 GETC, 3 OPEN, 4 CREAT, 5 CLOSE, 6 READ, 7 WRITE. Open: what OPEN/READ/WRITE return when DOS sets carry.
+- Service numbers as `pcode/pcode86.4-spec.md`: 0 EXIT, 1 PUTC, 2 GETC, 3 OPEN, 4 CREAT, 5 CLOSE, 6 READ, 7 WRITE. Open: what OPEN/READ/WRITE return when DOS sets carry.
 - Proposed `.tgt` entry (not decided): `SYS,2,2` → `call __sys$1` / `add sp,$2*2`; `extrn` line in `.BEGIN`.
 
 ## Open — Jeremy's calls
@@ -104,9 +104,9 @@ end start
 ## Approaches to try later (each measured against P0 on the same programs)
 - **Virtual-stack translator** (Claude's first recommendation, 2026-10-22, not taken then): keep the pure stack IR; the translator keeps a compile-time stack of operand descriptors (`CONST`, `ADDR_LOCAL`, `MEM_LOCAL`, `REG`, `COND`, `SPILLED`) and emits code only when an operand must exist. `x = a + b` → 3 instructions. Precedents: Wirth's Items (Oberon-0), V8 Liftoff for Wasm. Hazards: stack height at labels, aliasing of deferred loads, calls clobbering AX–DX, short Jcc.
 - **Staged translator for the same IR:** (1) macro table — the correctness baseline; (2) top of stack cached in AX; (3) descriptors as above.
-- **PCODE86.2** — two accumulators, Cain/Hendrix lineage (`claude/pcode86.2-spec.md`).
-- **PCODE86.3** — 8087-style stack two deep, static stack caching with a flip bit (`claude/pcode86.3-spec.md`).
-- **PCODE86.4** — two named registers, orthogonal operands (`claude/pcode86.4-spec.md`; "we come back to p86.4 later").
+- **PCODE86.2** — two accumulators, Cain/Hendrix lineage (`pcode/pcode86.2-spec.md`).
+- **PCODE86.3** — 8087-style stack two deep, static stack caching with a flip bit (`pcode/pcode86.3-spec.md`).
+- **PCODE86.4** — two named registers, orthogonal operands (`pcode/pcode86.4-spec.md`; "we come back to p86.4 later").
 - **A P0 interpreter in C** as a test oracle: run the same p-code on the host and as a .COM, compare outputs.
 - Byte-copy loop `while(*p) *m++ = *p++;` per iteration, the yardstick so far: 86.3 stack 21, 86.4 13, hand-written 9, Watcom 7; the 6502 under 86.4 59.
 

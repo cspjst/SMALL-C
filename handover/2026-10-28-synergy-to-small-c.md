@@ -20,15 +20,16 @@ Retired from the work (Jeremy, 2026-10-28 19:22): "GOAT has been put out to past
 ## SMALL-C's oracle
 Jeremy (2026-10-28 19:15): `~/dosbox/cspjst/SMALLC`. It's already a git repository — `cspjst/SMALL-C` on GitHub, branch `main`, last commit `9993464` (2026-09-26) — holding Jeremy's code: `src/`, `bin/`, `tools/`, `doc/`, `README.md`, `LICENSE`. **Those are Jeremy's: no department touches them without his word** (SMALL-C's rule: Jeremy writes the code). The documents share the repository (Jeremy, 19:24): "SMALL-C can absolutely share the repo its where we work and anyone else who joins us".
 
-## For SMALL-C's WELFARE to do
-1. **Access first.** Ask Jeremy for `~/dosbox/cspjst/SMALLC`, then for delete permission there before your first commit (without it git leaves lock files that break the next command).
-2. **Bring the documents home.** Copy each SMALL-C project document into the oracle, by department: `welfare/` (code of conduct, working agreement, stakeholders, the historiography), `sno/`, `pcode/`, `press/`, `handover/`. Copy exactly — read the project document to a file and copy the file; never retype a large document. Check each against its source. Then the project's copies are replaced by plain-name copies of the oracle.
-3. **One historiography.** Keep it whole, in `welfare/`, renamed after the repository: `SMALL-C-historiography.md` (Jeremy, 2026-10-28 19:24: "historiography takes root repo name"). Drop the plan to split it between `sno/` and `pcode/`.
-4. **Code of conduct.** Bring it into synergy's welfare-first order with rules 1, 2 and 4 above, tailored to SMALL-C. Jeremy signs it afresh.
-5. **Working agreement.** Add: the oracle and repository rule (item 6), commit names (7), WELFARE as push master (3), the eggs rule and list (5).
-6. **Dialogue.** Start `dialogue.md` at the root, as synergy's.
-7. **Pushing.** Commit as `Claude-SMALL-C-WELFARE`. Push only on Jeremy's word, and record each push in the dialogue with the hash. The Mac's shell has no GitHub credentials: GitHub must be linked to Claude (`connect-github.md`) and `cspjst/SMALL-C` added to your session; carry the commits across (a git bundle works) and push from your own workspace, then bring the Mac level.
-8. **Project Instructions.** Draft new ones — reading order, departments, "the oracle is `~/dosbox/cspjst/SMALLC`" — for Jeremy to paste.
+## Applied by SMALL-C's WELFARE (2026-10-28 19:27–20:20)
+*The action list was here; it's done, so it's replaced by this record, as the handover asked. The list itself is in git history (`3fc837c`). The story is in `welfare/SMALL-C-historiography.md`, chapter 17.*
+1. **Access** — folder and delete permission granted 19:27. Delete permission lapsed mid-session and was granted again (20:00).
+2. **Documents home** — every project document copied into `welfare/`, `sno/`, `pcode/`, `press/` and `handover/`, plus the Green Book's OCR text (Jeremy, 19:30: keep it). Checksummed both sides, and again after a pause. Commit `3fc837c`. The project's copies were replaced by plain-name copies of the oracle after the new instructions went in (20:08); code of conduct v1 bypassed (Jeremy, 20:11).
+3. **One historiography** — `welfare/SMALL-C-historiography.md`, owned by WELFARE; the split between `sno/` and `pcode/` dropped.
+4. **Code of conduct** — v3, synergy's welfare-first order tailored to SMALL-C, signed by Jeremy 20:03. Commit `322f12e`.
+5. **Working agreement** — the oracle and repository rule, commit names, WELFARE as push master, the eggs rule and list (git), the write guards. Commit `65811b2`.
+6. **Dialogue** — `dialogue.md` at the root. Commit `a772ad9`.
+7. **Pushing** — the first try was refused (Claude's GitHub App had only SYNERGY); Jeremy added SMALL-C. Pushed 20:19 on his word: `main` 9993464 → `a772ad9`, recorded in the dialogue (entry 2, `6a48200`).
+8. **Project Instructions** — drafted; pasted by Jeremy 20:08.
 
 ## Lessons from synergy
 - The Claude app's document window can save its loaded copy over a newer file: never write a file Jeremy has open; check the modification time first; read every write back and compare checksums, once at once and again after a pause.

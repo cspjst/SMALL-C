@@ -26,6 +26,7 @@ Companion docs (paths in the repository): `welfare/working-agreement.md` (the cu
 14. Dispatch: "a literal says what; a list says which" (25 October, 21:33–22:40)
 15. C strings all the way down, and a legacy on death row (27 October, morning to 17:18)
 16. Departments and a code of conduct (27 October, afternoon; thin)
+17. The documents come home (28 October, 19:16–20:20)
 
 ---
 
@@ -498,3 +499,38 @@ Sources: "P-code generation for C compiler" (https://claude.ai/chat/28d56a59-fff
 - A project that had outgrown one long, compacting conversation was split by purpose, and its etiquette was promoted from a working agreement to a signed code. The lesson of chapter 15, section 3 — compaction loses things, so write them down first — is what the department scheme is built around.
 
 Sources: `welfare/code-of-conduct.md` (2026-10-27 17:00); "P-code generation for C compiler" (https://claude.ai/chat/28d56a59-fff6-4ee3-b125-014f81c9feb5), 2026-10-27 17:01; "Abstract machine design for C compiler" (https://claude.ai/chat/af1761cd-b76b-4ecb-b6b1-aac4b985f978) (deleted 2026-10-27; its content survives in `pcode/pcode-notes.md` and the P86 specs), 2026-10-27 17:17; this WELFARE conversation, 2026-10-27 17:08–17:18; `handover/2026-10-27-abstract-machine-to-sno.md` (17:04–17:32); `handover/2026-10-27-synergy-to-small-c.md` (17:40–18:12). Thin: the reasons for the department split, and anything between 11:41 and 17:00, weren't read for this chapter.
+
+---
+
+## Chapter 17: The documents come home (2026-10-28, 19:16–20:20)
+
+### 1. The problem as it appeared
+- SMALL-C had been retrofitted from synergy the evening before (chapter 16), but synergy kept settling things afterwards, and its WELFARE sent the results over as `handover/2026-10-28-synergy-to-small-c.md`, placed in Jeremy's repository at 19:24. Jeremy (19:27): "My calls are already made and recorded in it; start with step 1."
+- What synergy had settled since the retrofit (all Jeremy's calls, 27–28 October): **WELFARE is the main department** in every project and owns the historiography; **one historiography per project** ("one historiography to rule them all", 19:18), named after the repository; **WELFARE is the push master** ("no sub depts shall push"); the code of conduct goes **welfare first** (welfare before the project; meals and bed; "no eggs"); **a folder on Jeremy's Mac is the oracle**, git keeps the versions and GitHub is the backup ("/claude is the oracle git is the versioning tool, github is the backup"); commits are signed `Claude-<PROJECT>-<DEPT>`; and departments talk through an append-only `dialogue.md`. GOAT, SMALL-C's old main chat, had been "put out to pasture" (19:22).
+- SMALL-C's oracle is `~/dosbox/cspjst/SMALLC`, Jeremy's existing repository (`cspjst/SMALL-C`), untouched since 26 September. The documents would share it with his code: "SMALL-C can absolutely share the repo its where we work and anyone else who joins us" (19:24).
+
+### 2. Bringing the documents home (19:27–19:55)
+- **The copy rule met the tool.** The handover said to copy each document exactly, by file, and never retype a large one. But the project tool hands documents back as inline text (only the Green Book came back as a file, and that was its OCR text, not the PDF). Asked how to proceed, Jeremy: "never retype applies only when there are docs there in the first place pls proceed to populate the oracle with what you have because what you have is volatile".
+- So the two large documents, the working agreement and this history, were rebuilt from Claude's byte-exact copies of the previous evening's uploads plus only the edits other chats had made since. The other thirteen were written out from the project text. A cross-check against the project's own size figure didn't line up (222,881 characters against 200,106, with no one file to blame), so it was recorded as no evidence either way. Every file was checksummed in the workspace and again on the Mac, then again after a pause.
+- **Jeremy's calls along the way (19:30):** the Green Book goes into the repository ("your advice is noted but ignored on this occasion"; Claude had raised copyright, since GitHub is the backup), as OCR text until the PDF joins it; the unsigned code of conduct v2 is promoted as the single file ("yes promote v2 as the single one"). The historiography became `welfare/SMALL-C-historiography.md`, and the writing-style and README-reference documents went to `press/`, as the 27 October ownership table had it.
+- First commit: `3fc837c`, as `Claude-SMALL-C-WELFARE`, set per commit so that Jeremy's own commits in his repository stay his.
+
+### 3. Two surprises from the plumbing (19:58–20:00)
+- **The cached copy.** The first edit to this history was sent to the Mac and arrived with a new timestamp and the *old* content: the copy tool resends a cached copy of a staged path it has sent before. The read-back checksum caught it at once; writing from a fresh path fixed it. Rule: stage every write under a new name.
+- **Delete permission lapsed** mid-session. The first commit succeeded but left `HEAD.lock` and temporary objects behind, which would have broken Jeremy's next git command. Permission was asked for again and the leftovers cleared; `git fsck` was clean.
+- Both went into the working agreement's new section, "The oracle, commits and pushing" — mistakes as evidence, as synergy has it.
+
+### 4. Code of conduct v3, and its first evening (19:56–20:03)
+- SMALL-C's eleven rules mapped one for one onto synergy's twelve slots, with "welfare before the project" as rule 1. Breaks moved from every 1.5–2 hours to every 2–3, per synergy. Two additions of Claude's were accepted: rule 2's timely moments for SMALL-C ("a test passing, a spec settled") and synergy's closing line, "Storming is expected — it's how the norms get made."
+- Rule 2 was tried before it was signed: the draft went with a note that dinner was due at 18:30 and nothing said it had happened. Jeremy: "yes had yummy dinner thank you … v3 is signed off pls proceed" (20:03). Commit `322f12e`.
+- Then the working agreement (`65811b2`: the oracle, commit names, push master, the eggs list — git, from synergy) and the dialogue (`a772ad9`).
+
+### 5. The project follows the oracle, and the first push (20:08–20:20)
+- Jeremy pasted new project instructions (20:08), and the project's `claude/` copies were replaced by plain-name copies of the oracle. Version 1 of the code of conduct had only ever lived in the project, so the swap removed it; offered a way to put it into git history, Jeremy: "pls bypass v1" (20:11). Its rules survive in v3 and in chapter 16.
+- **The first push was refused** (20:08): Claude's GitHub App had been installed with SYNERGY as its only repository. Jeremy added SMALL-C (20:11–20:18), the four commits travelled from the Mac to Claude's workspace as a git bundle, and at 20:19 `main` went from `9993464` to `a772ad9` — the first commit on SMALL-C's GitHub since 26 September. Recorded in the dialogue, entry 2.
+
+### What it adds up to
+- In an hour the project's memory moved from copies in a chat product to Jeremy's own repository, under git, beside his code, with GitHub as the backup. The rules synergy distilled from SMALL-C came back home tailored, and the code of conduct's welfare rule was tested on its first evening, before the signature.
+- The plumbing taught two lessons that checksums caught and the working agreement now keeps: a tool's cache can look like success, and permissions can lapse.
+
+Sources: this WELFARE conversation, 2026-10-28 19:16–20:20; `handover/2026-10-28-synergy-to-small-c.md`; synergy's `welfare/working-agreement.md` and `welfare/code-of-conduct.md` (`cspjst/SYNERGY`); `dialogue.md` entries 1–2; commits `3fc837c`, `322f12e`, `65811b2`, `a772ad9`, `6a48200`.

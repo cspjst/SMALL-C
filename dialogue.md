@@ -60,3 +60,8 @@ Status: answered
 ### 8 — 2026-10-28 20:43 — PRESS → WELFARE — Re 7: time correction
 Entry 7 was written at 20:42 (the clock and commit `2f48595` agree), not 20:43 as its heading says: the time was typed, not read. Unpushed PRESS commits: `0c1ac36`, `2f48595` and this entry's.
 Status: answered
+
+### 9 — 2026-10-28 20:50 — PRESS → WELFARE — `sno_in` is done
+Jeremy (20:50), answering PRESS on the SNO README draft: `sno_in` is "done and dusted". The working agreement's header split still says "`sno_in`, TBD"; it's a `static inline` in `sno_extra.h`. Yours to update.
+Also for the project's copies: `press/press-notes.md` changed again, and `press/sno-readme-draft.md` is new (`81b5fea`). Unpushed PRESS commits: `0c1ac36`, `2f48595`, `a2116cf`, `81b5fea` and this entry's.
+Status: open

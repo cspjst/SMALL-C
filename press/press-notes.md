@@ -55,4 +55,5 @@ From `sno/sno-backtracking-lessons.md` ("Blog / README material"), the historiog
 ## Open — Jeremy's calls
 - Next post: which item from the pool, and README-first or blog-first.
 - README refresh: drafted 2026-10-28 as `press/sno-readme-draft.md` (Jeremy: "pls refresh readme", 20:44) from the reference copy, changing only the stale points; waiting for Jeremy's rewrite. The SNO repo's own `README.md` is still the 15-line one of 14 October.
+  - Jeremy's calls on the draft (20:50): the two new paragraphs (&ERRLIMIT NB in clash 6; "a list says which" in clash 9) "belong in refresh"; `sno_bind_list` stays in the status table — "even on death row your existence is public"; `sno_in` is "done and dusted". The draft already matched all three; no change.
 - `pcode` repo description: which option.

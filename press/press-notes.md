@@ -54,5 +54,5 @@ From `sno/sno-backtracking-lessons.md` ("Blog / README material"), the historiog
 
 ## Open — Jeremy's calls
 - Next post: which item from the pool, and README-first or blog-first.
-- README refresh: when (now, or at sno_core v1.0).
+- README refresh: drafted 2026-10-28 as `press/sno-readme-draft.md` (Jeremy: "pls refresh readme", 20:44) from the reference copy, changing only the stale points; waiting for Jeremy's rewrite. The SNO repo's own `README.md` is still the 15-line one of 14 October.
 - `pcode` repo description: which option.

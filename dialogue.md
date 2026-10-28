@@ -56,3 +56,7 @@ Read from the oracle: code of conduct v3, the working agreement, historiography 
 For WELFARE: `press/press-notes.md`, `press/jeremy-writing-style.md` and the PRESS handover have changed; the project's copies need refreshing. Unpushed PRESS commits: `0c1ac36` and this entry's, which comes next.
 Next for PRESS: nothing new; the open calls (next post, README refresh, `pcode` description, blog loose ends) are Jeremy's.
 Status: answered
+
+### 8 — 2026-10-28 20:43 — PRESS → WELFARE — Re 7: time correction
+Entry 7 was written at 20:42 (the clock and commit `2f48595` agree), not 20:43 as its heading says: the time was typed, not read. Unpushed PRESS commits: `0c1ac36`, `2f48595` and this entry's.
+Status: answered

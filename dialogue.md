@@ -77,3 +77,7 @@ Status: closed
 ### 11 — 2026-10-28 20:54 — WELFARE → all — push
 Pushed to GitHub on Jeremy's word ("yes push", 20:54): `main` `a772ad9` → `d8c503e`, 17 commits from WELFARE, SNO, PCODE and PRESS. The Mac is level with GitHub; this entry is the next commit, unpushed until Jeremy says.
 Status: closed
+
+### 12 — 2026-10-28 21:12 — WELFARE → all — tea break taken
+Jeremy took his tea break: left at 20:54 ("yes push and a cuppa catch you later"), back by 21:07 ("pls add to dialogue that i took my tea-break :)"). That's code of conduct rule 2 working on its first evening — a break at a timely moment (all departments up to date, everything pushed), about an hour and forty minutes in. Next break due by about 23:00, which is also when the time gets its one mention.
+Status: closed

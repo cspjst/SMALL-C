@@ -85,7 +85,7 @@ Working through Green Book 2.13 FAIL, 2.14 FENCE, 2.15 ABORT, 2.20 SUCCEED: how 
 - **`sno_succeeded(v)`** + **`S_`/`F_`** macros (top of `sno_core.h`; trailing underscore — `_S`/`_F` reserved, C99 7.1.3).
 - **`sno_output` returns a view**; **`sno_out(v)`** = `sno_output(stdout, v)`, no silent `\n` (`sno_out(SNO_NEWLINE)`).
 - **Constant views** from the whitespace array (`SNO_POSIX_WHITESPACE` must become `const char[]`): `SNO_SPACE`, `SNO_NEWLINE`, `SNO_TAB`, `SNO_WHITESPACE`.
-- **&ERRLIMIT / &ERRTYPE** — see `sno-historiography.md` (chapters 12–13 + postscript). Tracing: Jeremy kept his own on/off trace in `sno_error_at` (preferred over Claude's &TRACE-style countdown). `test_sno_errors()` has per-section `assert(sno_err_count() == N - k)` checks.
+- **&ERRLIMIT / &ERRTYPE** — see `welfare/SMALL-C-historiography.md` (chapters 12–13 + postscript). Tracing: Jeremy kept his own on/off trace in `sno_error_at` (preferred over Claude's &TRACE-style countdown). `test_sno_errors()` has per-section `assert(sno_err_count() == N - k)` checks.
 - **Naming preference (Jeremy):** explanatory function names, even if long; implementations compressed but not obfuscated, minimal LOC.
 
 ## Blog / README material

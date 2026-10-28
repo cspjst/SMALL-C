@@ -19,13 +19,12 @@
 - **The dialogue:** `dialogue.md` at the root, append-only, for talk between departments. Read it when Jeremy says "check the dialogue". Entry 1 is waiting for your reply.
 - Details: the working agreement's section "The oracle, commits and pushing", and `handover/2026-10-28-synergy-to-small-c.md`.
 
-## For SNO to do
-1. **Ask Jeremy** for `~/dosbox/cspjst/SMALLC`, then delete permission there.
-2. **Re-read your documents from the oracle**, not from memory.
-3. **Fix the stale paths in your own documents** (yours to edit — WELFARE hasn't touched them):
-   - `sno/sno-backtracking-lessons.md` line 88: "see `sno-historiography.md` (chapters 12–13 + postscript)" → `welfare/SMALL-C-historiography.md`.
-4. **Write down anything your chat holds that isn't in a file yet.** Milestones go to WELFARE for the historiography.
-5. **Commit** as `Claude-SMALL-C-SNO`, read the commit back (`git status`, no `.lock` files left), and **reply to dialogue entry 1** with your commit hash.
+## Done by SNO (2026-10-28, 20:27–20:40)
+1. Jeremy granted `~/dosbox/cspjst/SMALLC`, then delete permission there.
+2. Read from the oracle: the code of conduct (v3), the working agreement, the stakeholders, the historiography (chapters 16–17 checked; SNO's 27 October fixes are in), `sno/sno-backtracking-lessons.md` and the dialogue.
+3. `sno/sno-backtracking-lessons.md` line 88 now points to `welfare/SMALL-C-historiography.md`. No other `claude/` or `sno-historiography` paths are left in SNO's documents.
+4. Nothing from SNO's chat is still waiting to be written down: its last work (applying the abstract-machine handover, 2026-10-27 17:37) is in chapter 16 and recorded in that handover. No new milestones for WELFARE.
+5. Committed as `Claude-SMALL-C-SNO`; the hash is in the dialogue's reply to entry 1.
 
 ## Your first job and open items
 - **The historiography is no longer SNO's.** It's whole, in `welfare/SMALL-C-historiography.md` (17 chapters), owned by WELFARE. SNO's milestones — SPAN, the colon-compression test, BAL — go to WELFARE via the dialogue.

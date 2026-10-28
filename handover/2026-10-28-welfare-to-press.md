@@ -19,17 +19,13 @@
 - **The dialogue:** `dialogue.md` at the root, append-only, for talk between departments. Read it when Jeremy says "check the dialogue". Entry 1 is waiting for your reply.
 - Details: the working agreement's section "The oracle, commits and pushing", and `handover/2026-10-28-synergy-to-small-c.md`.
 
-## For PRESS to do
-1. **Ask Jeremy** for `~/dosbox/cspjst/SMALLC`, then delete permission there.
-2. **Re-read your documents from the oracle**, not from memory.
-3. **Fix the stale paths in your own documents** (yours to edit — WELFARE hasn't touched them):
-   - `press/press-notes.md` line 12: `claude/sno-readme-reference.md` → `press/sno-readme-reference.md`, and `claude/jeremy-writing-style.md` → `press/jeremy-writing-style.md`.
-   - `press/press-notes.md` line 24: "the copy in the project (`claude/sno-readme-reference.md`)" → `press/sno-readme-reference.md`.
-   - `press/press-notes.md` line 38: `claude/sno-backtracking-lessons.md` → `sno/sno-backtracking-lessons.md`.
-   - `press/jeremy-writing-style.md` line 4: `claude/sno-readme-reference.md` → `press/sno-readme-reference.md`.
-   - Remit: "the historiography is PRESS's source, not its job — the other departments keep it" → WELFARE keeps it.
-4. **Write down anything your chat holds that isn't in a file yet.** Milestones go to WELFARE for the historiography.
-5. **Commit** as `Claude-SMALL-C-PRESS`, read the commit back (`git status`, no `.lock` files left), and **reply to dialogue entry 1** with your commit hash.
+## Done by PRESS (2026-10-28, from 20:41; the commit time is the end)
+- Folder access to `~/dosbox/cspjst/SMALLC` granted 20:41; delete permission asked for before the commit.
+- Read from the oracle: code of conduct v3, the working agreement, historiography chapter 17 (and the chapter list, to check PRESS's citations), `dialogue.md`, and PRESS's three documents.
+- Stale paths fixed: `press/press-notes.md` (remit now says WELFARE keeps the historiography, at `welfare/SMALL-C-historiography.md`; `press/` for the style docs; `sno/` for the lessons doc; "the copy in the oracle") and `press/jeremy-writing-style.md` line 4. `press/sno-readme-reference.md` had no stale paths and is unchanged. The pool's chapter citations (5, 8, 10–12, 14–16) were checked against the one historiography and still hold.
+- Chapter 17 ("The documents come home") added to the material pool.
+- Nothing in PRESS's chat that wasn't already in a file; no milestones for the historiography.
+- Committed as `Claude-SMALL-C-PRESS`, not pushed; the hash is in the dialogue's reply to entry 1.
 
 ## Your first job and open items
 - **First:** the steps above. Then nothing new is asked of PRESS; your open calls stand, and they're Jeremy's.

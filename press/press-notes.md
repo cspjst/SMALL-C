@@ -4,12 +4,12 @@
 
 ## Remit
 - Everything written for the outside world: the **READMEs** (SNO now; the `pcode` repo later), the **blog** (libfbp.blogspot.com), repo descriptions, and anything else public.
-- Not code, not specs, not the historiography. **The historiography is PRESS's source, not its job** — the other departments keep it; PRESS turns it into prose.
+- Not code, not specs, not the historiography. **The historiography (`welfare/SMALL-C-historiography.md`) is PRESS's source, not its job** — WELFARE keeps it; PRESS turns it into prose and sends any milestones of its own to WELFARE (dialogue or handover).
 - Departments mark blog-worthy moments as they happen (the historiography's "Blog line"s, the lessons doc's "Blog / README material"); PRESS collects them here.
 
 ## How PRESS works (from the code of conduct and the style docs)
 - **Claude drafts; Jeremy rewrites.** A draft is never final. Never change Jeremy's published wording silently — flag (code of conduct 6).
-- **Voice and layout:** `claude/sno-readme-reference.md` is THE reference; `claude/jeremy-writing-style.md` has the conventions and the feedback procedure:
+- **Voice and layout:** `press/sno-readme-reference.md` is THE reference; `press/jeremy-writing-style.md` has the conventions and the feedback procedure:
   1. compare against the reference (voice, layout, lessons);
   2. say briefly what works, then what departs;
   3. flag typos, factual slips and broken cross-references with line numbers;
@@ -21,7 +21,7 @@
 ## Published and in progress
 - **Blog post "C SNOBOL do SNOBOL"** (2026-10-24), from the SNO README. Header image: a real two-card SNOBOL4 deck in IBM 029 code (`OUTPUT = 'C SNOBOL DO SNOBOL'` SNO00010 / `END` SNO00020), SteelBlue Helvetica-style C (TeX Gyre Heros Bold); served from the SNO repo (`raw.githubusercontent.com/cspjst/SNO/129b649…/c-snobol-do-snobol.png` — Blogger rejected cldup); a † footnote explains the deck.
   - **Loose ends:** replace the `[link to repo]` placeholders; set the † href to the published post URL + `#fn-deck`.
-- **SNO README** — approved 2026-10-24; the copy in the project (`claude/sno-readme-reference.md`) is the style reference *and* a v0.4 snapshot. Jeremy's repo copy may have moved on — his wins.
+- **SNO README** — approved 2026-10-24; the copy in the oracle (`press/sno-readme-reference.md`) is the style reference *and* a v0.4 snapshot. Jeremy's repo copy may have moved on — his wins.
   - **Out of date in the reference copy (flag to Jeremy, don't fix silently):**
     - Colophon: "assembled with A86" — Open Watcom WASM/WLINK replaced A86 on 2026-10-23.
     - Colophon: "Written to parse the output of a Small-C compiler…" — narrower than SNO's purpose as Jeremy stated it on 2026-10-27 17:32: *a general-purpose library for parsing, translating and reasoning about information stored in strings, with a bent towards language compilers and interpreters.*
@@ -35,7 +35,7 @@
   - Caveat to keep honest: the IR assumes 16-bit words (the 6502 test — historiography chapter 5). Options 2 and 3 describe PCODE86.4; P0, the current learning machine, is a plain stack machine.
 
 ## Material pool (candidates — Jeremy picks)
-From `claude/sno-backtracking-lessons.md` ("Blog / README material"), the historiography and the working agreement:
+From `sno/sno-backtracking-lessons.md` ("Blog / README material"), the historiography and the working agreement:
 - **"Jeremy in SNOBOL Land"** — Alice frame: "'tea!' a little voice said" (the Dormouse); FAIL, FENCE and ABORT turn out to be C loops in disguise — "curiouser and curiouser". Jeremy: "going in the readme and blog".
 - "SNO has a FENCE between every element." (PEG; historiography ch. 11)
 - "A SNOBOL statement hides two loops; FAIL turns them; in SNO they're just C."
@@ -50,6 +50,7 @@ From `claude/sno-backtracking-lessons.md` ("Blog / README material"), the histor
 - **P86's 24 hours** — stack → accumulators → the 8087 → named registers → back to a stack machine, on purpose (ch. 5). PCODE material for a later post.
 - "a very 8086 problem to have in 2026" — Watcom E1118, the test suite outgrowing a .COM (ch. 12).
 - "Departments and a code of conduct" — perhaps, if Jeremy wants a post about working with Claude (ch. 16).
+- **"The documents come home"** — a tool's cache that looked like success (the checksum caught it); a code of conduct tested on its first evening, before the signature: "yes had yummy dinner thank you". Same post as ch. 16, if there is one (ch. 17).
 
 ## Open — Jeremy's calls
 - Next post: which item from the pool, and README-first or blog-first.

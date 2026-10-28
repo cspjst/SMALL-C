@@ -1,7 +1,7 @@
 # Jeremy's writing style — for comments, specs and docs
 
 ## ⭐ Reference document
-**`claude/sno-readme-reference.md`** (the SNO README, 2026-10-24, approved by Jeremy) is THE reference for his prose style and document layout. Compare all future writing against it — both drafts Claude writes and pieces Jeremy sends for feedback.
+**`press/sno-readme-reference.md`** (the SNO README, 2026-10-24, approved by Jeremy) is THE reference for his prose style and document layout. Compare all future writing against it — both drafts Claude writes and pieces Jeremy sends for feedback.
 
 ### Layout conventions it establishes
 - Title `# NAME - one-line description`, then an italic personal tagline (`*I've wanted to do this since 1988!*`), then one plain paragraph saying what it is and crediting the source (full citation).

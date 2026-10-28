@@ -23,3 +23,8 @@ SMALL-C's documents now live in the oracle, `~/dosbox/cspjst/SMALLC`, beside Jer
 Before your next commit: ask Jeremy for the folder and delete permission, commit as `Claude-SMALL-C-<DEPT>`, and don't push — WELFARE does that on Jeremy's word. Code of conduct v3 (signed 2026-10-28 20:03) and the working agreement's new section "The oracle, commits and pushing" have the rest.
 Please reply here when you've read it.
 Status: open
+
+### 2 — 2026-10-28 20:20 — WELFARE → all — push
+Pushed to GitHub `cspjst/SMALL-C` on Jeremy's word ("ok push", 20:18): `main` 9993464 → `a772ad9`. Four WELFARE commits: `3fc837c` (documents home), `322f12e` (code of conduct v3), `65811b2` (working agreement), `a772ad9` (this dialogue). The Mac is level with GitHub; this entry is the next commit, unpushed until Jeremy says.
+How: Claude's GitHub App gained SMALL-C (Jeremy, 20:11–20:18; at first only SYNERGY was selected, so the first try at 20:08 was refused); the commits went from the Mac to Claude's workspace as a git bundle and were pushed from there.
+Status: closed

@@ -1,12 +1,27 @@
 # Working agreement — SMALL-C / SNO / P86
 
-**Companion docs:** `claude/sno-historiography.md` (the project's historiography — dated narrative of *why*, 17 Sep 2026 onwards), `claude/sno-backtracking-lessons.md` (FAIL/FENCE/ABORT study, the literal family and its signatures, `sno_bind_list`, S_/F_, constants, sno_out — 2026-10-25). Where they're newer than this file, they win.
+*Owned by WELFARE, SMALL-C's main department. The current rules and settled decisions; the code of conduct (`welfare/code-of-conduct.md`, v3) wins over it.*
+
+**Companion docs:** `welfare/SMALL-C-historiography.md` (the project's historiography — dated narrative of *why*, 17 Sep 2026 onwards), `sno/sno-backtracking-lessons.md` (FAIL/FENCE/ABORT study, the literal family and its signatures, `sno_bind_list`, S_/F_, constants, sno_out — 2026-10-25). Where they're newer than this file, they win.
 
 ## 📜 Historiography — standing rule (Jeremy, 2026-10-25 15:56: "permanently")
-- **Every software project — potentially any non-trivial project — must have a historiography**: a dated, sourced narrative of *why* the design is the way it is (problem → what was tried → what the book/hardware/history said → what was decided, and by whom; Jeremy's calls marked; sources cited; thin stretches labelled, never invented). For this project: `claude/sno-historiography.md` (covers Small-C, P86 and SNO). Also saved as Jeremy's skill `project-historiography` for all projects.
+- **Every software project — potentially any non-trivial project — must have a historiography**: a dated, sourced narrative of *why* the design is the way it is (problem → what was tried → what the book/hardware/history said → what was decided, and by whom; Jeremy's calls marked; sources cited; thin stretches labelled, never invented). For this project: `welfare/SMALL-C-historiography.md` (covers Small-C, P86 and SNO) — **one historiography for the whole project, owned by WELFARE**; departments send it their milestones and keep none of their own (Jeremy, 2026-10-28 19:18: "one historiography to rule them all"). Also saved as Jeremy's skill `project-historiography` for all projects.
 - **Keep it current as we go**: at each natural milestone (a design decision settled, a chapter of work done, a bug that taught something), add or extend a chapter — don't wait.
 - **Before compaction, ask first.** Before a conversation is compacted, Claude **must** ask Jeremy whether anything should go into the historiography, and write it *before* compacting. Caveat (honest): automatic compaction can happen without warning to Claude, so the real safeguard is the rule above — keep the historiography up to date continuously, and when Claude sees the context getting long, or Jeremy asks to compact, ask then.
 - Origin: the 14–24 October SNO days survive only as a compaction summary because nothing was written down first — the reason for this rule.
+- **Before a new conversation**, too: a department moving to a fresh chat writes its milestones into the historiography first (code of conduct 12).
+
+## 🗄️ The oracle, commits and pushing (from synergy, 2026-10-27/28; `handover/2026-10-28-synergy-to-small-c.md`)
+- **The oracle is `~/dosbox/cspjst/SMALLC`** on Jeremy's Mac (Jeremy, 2026-10-28 19:15): the source of truth for every document. Git keeps the versions, GitHub (`cspjst/SMALL-C`, branch `main`) is the backup, and the claude.ai project holds plain-name copies. One file per document, edited in place — no `-vN` names (synergy, 2026-10-27 20:28: "/claude is the oracle git is the versioning tool, github is the backup").
+- **The documents share Jeremy's repository** (Jeremy, 2026-10-28 19:24: "SMALL-C can absolutely share the repo its where we work and anyone else who joins us"). `src/`, `bin/`, `tools/`, `doc/`, `README.md` and `LICENSE` are Jeremy's: **no department touches them without his word.**
+- **Commit names: `Claude-<PROJECT>-<DEPT>`** (synergy, 20:31, 20:55) — `Claude-SMALL-C-WELFARE`, `Claude-SMALL-C-SNO`, `Claude-SMALL-C-PCODE`, `Claude-SMALL-C-PRESS`; email `noreply@anthropic.com`. Set per commit (`git -c user.name=… -c user.email=… commit`), **never in the repository's config** — Jeremy's own commits here stay his.
+- **WELFARE is the push master** (synergy, 21:19: "we need a push master and that shall be WELFARE as the root of the org tree no sub depts shall push"). Every department commits; only WELFARE pushes, only on Jeremy's word, and records each push in `dialogue.md` with the hash. Quote a hash only after the last rewrite (re-authoring or amending changes it).
+- **The dialogue:** `dialogue.md` at the root of the oracle, owned by WELFARE, append-only, for talk between departments. A department reads it when Jeremy says "check the dialogue".
+- **Guards when writing to the Mac** (code of conduct 11):
+  - Ask for folder access, then delete permission, at the start of a session. Without delete permission git leaves `.lock` files that break the next git command — Jeremy's own included. The permission can lapse mid-session (2026-10-28, 20:00): if a delete fails, ask again, then clear only the leftovers your own command made.
+  - Check the modification time before writing; never write a file Jeremy has open (the Claude app's document window can save its loaded copy over a newer file).
+  - Read every write back and compare checksums — once at once and again after a pause.
+  - **Stage each write under a fresh path.** The copy-to-Mac tool resends a cached copy of a staged path it has sent before: on 2026-10-28 at 19:58 it rewrote the historiography with its old content and a new timestamp. The checksum caught it.
 
 ## 📌 Pinned
 - **BAL — definitely wanted, improved version** (Jeremy, 2026-10-22). Green Book 2.19 BAL is fixed to parentheses; ours takes a **two-character set defining the brackets** (e.g. `"()"`, `"[]"`, `"{}"`), so it serves P86 operands like `[bx+si]` and C source alike.
@@ -28,8 +43,8 @@
 - **`sno_view_t sno_str_replace(char* buf, size_t size, const char** from, const char** to)`** — heading `1.5 C STRING REPLACE`, template expansion for P86 (`sub sp,$1*2`). Each marker string `from[i]` → `to[i]`; both NULL-terminated lists. Left to right; **first marker in the list wins** (SNOBOL alternation — list `"$10"` before `"$1"`); single pass (inserted text not rescanned); unmatched text copied (`jmp $` safe). Errors: buf/from/to NULL or no `'\0'` within size → 10; result too big → 15, **only when a result is formed**. Failure (as REPLACE): lists of different lengths, empty list, `""` marker → `sno_fail()`, buf unchanged (Jeremy could make `""` marker error 4 instead — not the book's call, it's a C addition). Implemented by Jeremy (one pass, calloc temp of `size`, `goto error`); all tests pass.
 - **`sno_view_t sno_chr_replace(char* buf, size_t size, char* from, char* to)`** — `3.4.2 SNOBOL REPLACE(X,Y,Z)`, character translation in place; from/to are C strings. Errors: buf/from/to NULL or no `'\0'` within size → 10; no error 15 (size never changes). Failure per the Green Book (not errors): from/to different lengths or either `""`. Rightmost correspondence for repeats in from (FEET→FOOT — Green Book 3.4.2 p.81, verbatim; likely the 360 `TR` table heritage); a swap ("AB"→"BA") is one pass; `'\0'` can't be in from/to, so the terminator is never translated. Implemented by Jeremy with `strrchr` (passes); a 256-byte table + `XLAT` (`LODSB/XLAT/STOSB` in `__asm`, with `cld`) version also verified in Watcom/DOSBox. Claude suggested `const char*` for from/to (Jeremy's call).
 
-## Breaks and late nights (Jeremy's request, 2026-10-24)
-- Message timestamps are visible (Europe/London). **Suggest a break after roughly 1.5–2 hours of continuous work** in a session — once, briefly, at a natural pause (after a test passes, a spec is settled), not mid-thought.
+## Meals, breaks and late nights — code of conduct rule 2 (v3, 2026-10-28)
+- Message timestamps are visible (Europe/London). Meals around 07:30, 12:30 and 18:30; bed before midnight. **Encourage a break every 2–3 hours** — once, briefly, at a natural pause (after a test passes, a spec is settled), not mid-thought. (Jeremy's request of 2026-10-24 said 1.5–2 hours; v3 follows synergy's 2–3.)
 - **Discourage going beyond midnight**: from about 23:00 mention it once; after midnight, gently suggest stopping at the next natural point and say where to pick up. He's an adult — suggest, don't nag or refuse to help.
 
 ## Roles
@@ -39,7 +54,7 @@
 - Use the signatures in Jeremy's current headers exactly; don't invent or reorder parameters. When proposing a signature, say it's a proposal.
 - When restructuring Jeremy's text, keep his wording and tags; if something has to move or change, say so — never silently.
 - **Final documentation pass is Claude's job**, once the coding is done: convert the headers to nested Doxygen groups (below) and check they build without warnings.
-- **Writing feedback**: compare his prose against `claude/sno-readme-reference.md` using the procedure in `claude/jeremy-writing-style.md`.
+- **Writing feedback**: compare his prose against `press/sno-readme-reference.md` using the procedure in `press/jeremy-writing-style.md`.
 - **Tooling (2026-10-24/25):** Claude can install Open Watcom v2 (GitHub release snapshot) and DOSBox in the session and build/run `.COM` tests headlessly — use it to verify tests and asm on the real target, not just gcc. (Watcom rejects some things gcc accepts: non-constant automatic struct initialisers in older code paths, `{ ptr, ptr + 1 }` from a `const char* const` — E1054.)
 
 ## No spoilers
@@ -113,6 +128,9 @@ Narrative style, not Java-style `@param`/`@retval`. Sections in this order, omit
 - To the point. Can be interesting, but no padding.
 - Don't explain things Jeremy already knows (40 years of C and 8086 assembly). Don't re-litigate settled ground ("this is old ground i want to press on").
 - No sycophancy; some humour welcome. Asked for marks, give an honest score with reasons.
+- **Sucking eggs** (code of conduct 4; synergy, 2026-10-27 20:14). Keep the small explanations by default — a line of "why" costs little. When Jeremy says "sucking eggs" (or "eggs") for a topic, drop that level of explanation for that topic from then on and add it to the list below, so the next session doesn't do it again. Feedback, not a telling-off: no apology, just adjust. Origin here: 2026-10-23, after `chmod +x` was explained — "no carry on i'll feedback if im sucking eggs ;)".
+- **Eggs** — topics Jeremy knows; no explanation at that level:
+  - **git** (said in synergy, 2026-10-27 20:14) — status, remotes, commits; just report what happened.
 
 ## Return types: views versus bool (global rule, 2026-10-24)
 - **If it takes `sno_view_t* u` (a subject), it returns a view.** Pattern functions return the matched view; cursor tests (RPOS) return a null string **at the cursor** (`[cursor, cursor)`, not `sno_null()`) for true and `sno_fail()` for false — SNOBOL's own model (Green Book ch. 3: predicates "return the null string if the condition is met and fail otherwise"). Keeps everything chainable, and every result points into the subject.
@@ -126,7 +144,7 @@ Narrative style, not Java-style `@param`/`@retval`. Sections in this order, omit
 ## Errors: failure versus Green Book error (10.2.2/10.2.3)
 - **Failure** = the text doesn't match. Return `sno_fail()` (never `sno_null()`); failure views propagate.
 - **Precondition** = programmer error = `sno_error(SNO_ERR_...)` (in `sno_error.h/.c`, v0.4). Replaced `assert` (survives NDEBUG).
-- **&ERRLIMIT and &ERRTYPE implemented (2026-10-25; story in `sno-historiography.md`):**
+- **&ERRLIMIT and &ERRTYPE implemented (2026-10-25; story in `welfare/SMALL-C-historiography.md`):**
   - Default (limit 0, as SNOBOL): print the Green Book message (+ file, line, `__func__`) and exit with ERRORLEVEL = error number.
   - `sno_err_limit(n)` = `&ERRLIMIT = n` (also clears the type); `sno_err_count()` = errors still allowed; `sno_err_type()` = last error number, read-only (SNOBOL's protected keyword), sticky. State is `static` in `sno_error.c` (Jeremy: opaque).
   - Under the limit a conditionally fatal error (1–16) uses one up, is recorded, and **"failure occurs in the expression with the error"** — the function must return its failure value at once. Unconditionally fatal (17–28) always halt.
@@ -176,9 +194,11 @@ Narrative style, not Java-style `@param`/`@retval`. Sections in this order, omit
 - Every repeated match must consume.
 
 ## Status (sno_core.h v0.4, sno_extra.h v0.1, sno_error.h v0.4)
+- **Departments:** WELFARE is the main department (synergy, 2026-10-27 18:26: "welfare *is* the main"); GOAT, the old main SNO chat, retired 2026-10-28 19:22 ("put out to pasture"). SNO, PCODE and PRESS as before.
+- **Retrofitted from synergy** 2026-10-27 18:14 (`handover/2026-10-27-synergy-to-small-c.md`); brought up to date 2026-10-28 (`handover/2026-10-28-synergy-to-small-c.md`): documents home in the oracle (`3fc837c`), code of conduct v3 signed 20:03 (`322f12e`).
 - v0.3: preconditions, ANY/NOTANY, sno_is_null, template comments.
 - v0.4: sno_error replaces assert (Green Book error numbers, ERRORLEVEL exit); ANY/NOTANY return matched views; LEN.
-- Since v0.4: RTAB, REM, TAB, RPOS; POS not provided; sno_at parked; errors-first; header split (`sno_extra.h`); `sno_str_replace`, `sno_chr_replace` implemented and passing; **2026-10-25:** `sno_succeeded` + `S_`/`F_`; `sno_output` returns a view, `sno_out`; BREAK implemented and passing (after the `while(*q)` fix); &ERRLIMIT/&ERRTYPE (`sno_error` v0.4, `return sno_error(...)`); `test_sno_errors()` (27 lines incl. bind_list) and `test_sno_errors_extra()` (21); `test_fail_first_extra()` updated; tests split into two programs; `sno_bind_list` spec + test written; historiography written for the whole project. README approved (reference: `claude/sno-readme-reference.md`) — **its colophon still says "assembled with A86"; Open Watcom WASM/WLINK replaced A86 on 2026-10-23** (found by the historiography).
+- Since v0.4: RTAB, REM, TAB, RPOS; POS not provided; sno_at parked; errors-first; header split (`sno_extra.h`); `sno_str_replace`, `sno_chr_replace` implemented and passing; **2026-10-25:** `sno_succeeded` + `S_`/`F_`; `sno_output` returns a view, `sno_out`; BREAK implemented and passing (after the `while(*q)` fix); &ERRLIMIT/&ERRTYPE (`sno_error` v0.4, `return sno_error(...)`); `test_sno_errors()` (27 lines incl. bind_list) and `test_sno_errors_extra()` (21); `test_fail_first_extra()` updated; tests split into two programs; `sno_bind_list` spec + test written; historiography written for the whole project. README approved (reference: `press/sno-readme-reference.md`) — **its colophon still says "assembled with A86"; Open Watcom WASM/WLINK replaced A86 on 2026-10-23** (found by the historiography).
 - Open in Jeremy's code: `test_output()` has `//assert(sno_failed(sno_output(f, v)));` commented out — Watcom's `fwrite` on an `"r"` stream returns 0 with `ferror` set (verified in DOSBox), so if it fails, `sno_output` isn't comparing `fwrite`'s count with the size.
 - sno_extra.h loose ends (flagged 2026-10-24): typo `snoe_core.h` in file comment; Functions list stale (UNBIND "moving", 1.5/3.4.2 entries need the new names, REPLACE "planned"); add `#include "sno_core.h"`; blank line before the REPLACE comment; INPUT's text-mode `'\r'` note dropped (Jeremy to decide); `@see` cross-references need the new names.
 - **Blog post (2026-10-24)**: "C SNOBOL do SNOBOL" on libfbp.blogspot.com, from the README. Header image = a real two-card SNOBOL4 deck in IBM 029 code (`OUTPUT = 'C SNOBOL DO SNOBOL'` SNO00010 / `END` SNO00020), SteelBlue Helvetica-style C; image in the SNO repo (`raw.githubusercontent.com/cspjst/SNO/129b649…/c-snobol-do-snobol.png`); † footnote explains the deck. Loose ends: replace `[link to repo]` placeholders; set the † href to the published post URL + `#fn-deck`. More material: "must" vs "fails if"; "Jeremy in SNOBOL Land"; FENCE everywhere; &ERRLIMIT story (see companion docs).

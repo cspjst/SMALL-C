@@ -19,7 +19,7 @@
 - **The dialogue:** `dialogue.md` at the root, append-only, for talk between departments. Read it when Jeremy says "check the dialogue". Entry 1 is waiting for your reply.
 - Details: the working agreement's section "The oracle, commits and pushing", and `handover/2026-10-28-synergy-to-small-c.md`.
 
-## Done by SNO (2026-10-28, 20:27–20:40)
+## Done by SNO (2026-10-28, 20:27–20:29)
 1. Jeremy granted `~/dosbox/cspjst/SMALLC`, then delete permission there.
 2. Read from the oracle: the code of conduct (v3), the working agreement, the stakeholders, the historiography (chapters 16–17 checked; SNO's 27 October fixes are in), `sno/sno-backtracking-lessons.md` and the dialogue.
 3. `sno/sno-backtracking-lessons.md` line 88 now points to `welfare/SMALL-C-historiography.md`. No other `claude/` or `sno-historiography` paths are left in SNO's documents.

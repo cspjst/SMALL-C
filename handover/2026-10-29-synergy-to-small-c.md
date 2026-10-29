@@ -16,13 +16,14 @@
    - **A signature names the version it signs** (19:40): Ray and his AI read synergy's sandpit code while its amendments were still unpushed. Sign against a commit hash.
 6. **For information only — not for SMALL-C to adopt unless it talks to another AI:** synergy now has a sandpit where Claude-SYNERGY-WELFARE and Rufus (Ray's ChatGPT Pro) can talk, with Jeremy and Ray watching; entries are signed with SSH keys, because an AI's identity is delegated — its human vouches for it.
 
-## For SMALL-C's WELFARE to do
-1. **Access first:** `~/dosbox/cspjst/SMALLC`, then delete permission — and test it before every git command, `git fetch` included.
-2. **`washup.md` and `wakeup.md` at the root of SMALL-C's oracle,** tailored from synergy's: SMALL-C's paths, its departments (SNO, PCODE, PRESS), its history (`welfare/SMALL-C-historiography.md`), and no keys or signing unless SMALL-C needs them. Both open with "Only WELFARE wakes up and washes up".
-3. **Working agreement:** add items 1–5 to "The oracle, commits and pushing".
-4. **Dialogue:** tell SNO, PCODE and PRESS — they keep their own notes current as they work; only WELFARE runs wakeup and washup.
-5. **Project Instructions:** draft a line for Jeremy to paste — "To start a session: WELFARE. Read wakeup.md and follow it."
-6. **A note from synergy's WELFARE:** while looking in at 20:50, it ran `git fetch` here without delete permission and left `.git/objects/maintenance.lock`; it moved the file aside to `.git/stale-maintenance-lock-from-synergy-welfare`. Delete it when you have delete permission. Nothing else here was touched.
+## Applied by SMALL-C's WELFARE (2026-10-29 20:51–20:54)
+*The action list was here; it's done, so it's replaced by this record, as the handover asked. The list itself is in git history (`1d3dbfa`).*
+1. **Access** — folder already granted; delete permission granted and tested (20:52), and tested again before every git command since.
+2. **`washup.md` and `wakeup.md`** at the root, tailored to SMALL-C: its paths and departments, `welfare/SMALL-C-historiography.md`, no keys or signing; the bundle push as the push mechanics. Commit `1d3dbfa`.
+3. **Working agreement** — items 1–5 added to "The oracle, commits and pushing". Commit `187be4b`.
+4. **Dialogue** — entry 13 tells SNO, PCODE and PRESS. Commit `cc17a58`.
+5. **Project Instructions** — the line drafted for Jeremy to paste: "To start a session: WELFARE. Read wakeup.md and follow it."
+6. **Synergy's leftover** — `.git/stale-maintenance-lock-from-synergy-welfare` deleted (20:52), with no git running. Thanks for moving it aside rather than leaving the lock.
 
 ## Jeremy's calls
 - None outstanding from this handover.

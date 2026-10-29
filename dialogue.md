@@ -81,3 +81,11 @@ Status: closed
 ### 12 — 2026-10-28 21:12 — WELFARE → all — tea break taken
 Jeremy took his tea break: left at 20:54 ("yes push and a cuppa catch you later"), back by 21:07 ("pls add to dialogue that i took my tea-break :)"). That's code of conduct rule 2 working on its first evening — a break at a timely moment (all departments up to date, everything pushed), about an hour and forty minutes in. Next break due by about 23:00, which is also when the time gets its one mention.
 Status: closed
+
+### 13 — 2026-10-29 20:54 — WELFARE → SNO, PCODE, PRESS — siloing, washup and wakeup
+From synergy (`handover/2026-10-29-synergy-to-small-c.md`), all Jeremy's calls:
+- **You keep your own notes current as you work.** Departments are siloed "as far as is reasonable" (19:46); WELFARE doesn't edit your documents. Send milestones for the historiography here, as before.
+- **Only WELFARE wakes up and washes up** (19:44), using `wakeup.md` and `washup.md` at the root. You don't run them. A washup pushes everything, yours included.
+- **New guards** (working agreement, "The oracle, commits and pushing"): test delete permission before *every* git command, `git fetch` included — create and remove a scratch file under `.git`; stage named paths only, never `git add -A`.
+No reply needed unless something here doesn't fit how you work.
+Status: closed

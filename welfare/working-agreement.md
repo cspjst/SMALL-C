@@ -27,7 +27,7 @@
   - **A signature names the version it signs** (synergy, 2026-10-29 19:40): a sign-off is against a commit hash, so no one reads unpushed amendments as signed. For SMALL-C: when Jeremy signs a document, record the commit that holds the version he signed.
   - Check the modification time before writing; never write a file Jeremy has open (the Claude app's document window can save its loaded copy over a newer file).
   - Read every write back and compare checksums — once at once and again after a pause.
-  - **Times come from the clock**, never estimated: the message timestamp, `date`, or the commit time. SNO's first dialogue entry carried a guessed 20:41 for a 20:29 write (2026-10-28).
+  - **Times come from the clock**, never estimated: the message timestamp, `date`, or the commit time. SNO's first dialogue entry carried a guessed 20:41 for a 20:29 write (2026-10-28). **Run `date` just before writing any time** — knowing the rule isn't enough: WELFARE wrote 20:55 and 20:56 for 20:54 the next day (caught before reaching the Mac).
   - **Stage each write under a fresh path.** The copy-to-Mac tool resends a cached copy of a staged path it has sent before: on 2026-10-28 at 19:58 it rewrote the historiography with its old content and a new timestamp. The checksum caught it.
 
 ## 📌 Pinned
@@ -203,6 +203,8 @@ Narrative style, not Java-style `@param`/`@retval`. Sections in this order, omit
 ## Status (sno_core.h v0.4, sno_extra.h v0.1, sno_error.h v0.4)
 - **Departments:** WELFARE is the main department (synergy, 2026-10-27 18:26: "welfare *is* the main"); GOAT, the old main SNO chat, retired 2026-10-28 19:22 ("put out to pasture"). SNO, PCODE and PRESS as before.
 - **Retrofitted from synergy** 2026-10-27 18:14 (`handover/2026-10-27-synergy-to-small-c.md`); brought up to date 2026-10-28 (`handover/2026-10-28-synergy-to-small-c.md`): documents home in the oracle (`3fc837c`), code of conduct v3 signed 20:03 (`322f12e`).
+- **2026-10-28/29:** SNO, PCODE and PRESS brought up to date by handover, in their existing chats (dialogue 1 closed 20:52); pushed to `d8c503e`. 2026-10-29: `washup.md` and `wakeup.md` adopted from synergy, departments siloed, the delete test before every git command. First washup 2026-10-29 from 20:57 — see `handover/2026-10-29-welfare-washup.md`.
+- **Waiting on Jeremy:** finishing `sno_find_lit` (SNO, then SPAN); P0 v0.1 — ENTER, LEAVE, EXIT, SYS (PCODE); his rewrite of `press/sno-readme-draft.md` (PRESS).
 - v0.3: preconditions, ANY/NOTANY, sno_is_null, template comments.
 - v0.4: sno_error replaces assert (Green Book error numbers, ERRORLEVEL exit); ANY/NOTANY return matched views; LEN.
 - Since v0.4: RTAB, REM, TAB, RPOS; POS not provided; sno_at parked; errors-first; header split (`sno_extra.h`); `sno_str_replace`, `sno_chr_replace` implemented and passing; **2026-10-25:** `sno_succeeded` + `S_`/`F_`; `sno_output` returns a view, `sno_out`; BREAK implemented and passing (after the `while(*q)` fix); &ERRLIMIT/&ERRTYPE (`sno_error` v0.4, `return sno_error(...)`); `test_sno_errors()` (27 lines incl. bind_list) and `test_sno_errors_extra()` (21); `test_fail_first_extra()` updated; tests split into two programs; `sno_bind_list` spec + test written; historiography written for the whole project. README approved (reference: `press/sno-readme-reference.md`) — **its colophon still says "assembled with A86"; Open Watcom WASM/WLINK replaced A86 on 2026-10-23** (found by the historiography).

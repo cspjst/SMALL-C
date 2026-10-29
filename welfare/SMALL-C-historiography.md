@@ -27,6 +27,7 @@ Companion docs (paths in the repository): `welfare/working-agreement.md` (the cu
 15. C strings all the way down, and a legacy on death row (27 October, morning to 17:18)
 16. Departments and a code of conduct (27 October, afternoon; thin)
 17. The documents come home (28 October, 19:16–20:20)
+18. The departments catch up, and the first washup (28 October 20:22 – 29 October 20:58)
 
 ---
 
@@ -534,3 +535,36 @@ Sources: `welfare/code-of-conduct.md` (2026-10-27 17:00); "P-code generation for
 - The plumbing taught two lessons that checksums caught and the working agreement now keeps: a tool's cache can look like success, and permissions can lapse.
 
 Sources: this WELFARE conversation, 2026-10-28 19:16–20:20; `handover/2026-10-28-synergy-to-small-c.md`; synergy's `welfare/working-agreement.md` and `welfare/code-of-conduct.md` (`cspjst/SYNERGY`); `dialogue.md` entries 1–2; commits `3fc837c`, `322f12e`, `65811b2`, `a772ad9`, `6a48200`.
+
+---
+
+## Chapter 18: The departments catch up, and the first washup (2026-10-28 20:22 – 2026-10-29 20:58)
+
+### 1. The problem as it appeared
+- With the documents home (chapter 17), the three other departments were still working from memories of `claude/...` paths. Jeremy (20:22): "how do we bring press, sno and pcode upto date".
+
+### 2. Handovers, and keeping the old chats (20:22–20:26)
+- WELFARE proposed one handover per department, and recommended fresh chats. Jeremy chose otherwise: "lets try out keeping the existing chats first" (20:25). Each handover (`handover/2026-10-28-welfare-to-<dept>.md`) said what had changed for everyone, listed the stale lines in that department's own documents with line numbers — the department fixes its own, so its first commit tests the setup — and its open items. SNO's also handed the historiography to WELFARE.
+
+### 3. Each department, in its existing chat (20:28–20:50)
+- **SNO** (20:28–20:33) read from the oracle, fixed its one stale path and replied. Its slip: entry 3 carried a guessed time, then was corrected *in place* — Jeremy (20:32): "append only is the rule". Two rules followed: corrections are new entries, and times come from the clock. SNO also brought Jeremy's answers: the `return sno_error(...)` pass is done; `sno_find_lit` is implemented, not yet passing, and his to finish.
+- **PCODE** (20:36) fixed five paths. Its slip: it claimed the project's copy of its notes lacked three sections; they were there. WELFARE corrected it in a new entry, and took on refreshing the project's copies whenever a department's documents change.
+- **PRESS** (20:42–20:50) fixed its paths, typed rather than read one time (and corrected it in a new entry), and drafted a refresh of the SNO README as a new file for Jeremy to rewrite, leaving the approved reference untouched. Jeremy's calls on it, through PRESS: the two new paragraphs "belong in refresh"; `sno_bind_list` stays in the status table — "even on death row your existence is public"; and `sno_in` is "done and dusted", which WELFARE's working agreement still had as TBD (20:50).
+- **The trial's result:** all three existing chats read from the files and made no `claude/` slips. Their mistakes were small and of one kind — a time not read from the clock, a claim not checked — and all were caught in the dialogue, not in the code. Entry 1 closed at 20:52.
+
+### 4. Push, and a tea break (20:54–21:12)
+- Jeremy: "yes push and a cuppa catch you later" (20:54). Seventeen commits from all four departments went up, `a772ad9` → `d8c503e`. Back by 21:07: "pls add to dialogue that i took my tea-break :)" — rule 2's first break, at a timely moment, about an hour and forty minutes in (dialogue 12).
+
+### 5. Synergy again: washup, wakeup and siloing (29 October, 20:51–20:58)
+- Synergy's second handover (`handover/2026-10-29-synergy-to-small-c.md`) brought its evening's settlements: `washup.md` and `wakeup.md`, run *only* by WELFARE (Jeremy, in synergy, 19:44: "*ONLY* welfare can wakeup and washup"); a washup implies push all; departments siloed "as far as is reasonable" — they keep their own notes, and WELFARE's chain of command is pushing, waking up and washing up; delete permission tested before every git command, because it lapses when the desktop app restarts.
+- Jeremy's instructions for the session: "ask me for access and delete permission first, and test it before every git command". Synergy's WELFARE had itself left a lock file here at 20:50, from a `git fetch` without delete permission, and moved it aside honestly; SMALL-C's WELFARE deleted it.
+- Rule 2 opened the session: dinner was asked about before the work. Jeremy: "thank you i had dinner and then tea break pls carry on" (20:52).
+- Both procedures were tailored to SMALL-C, the working agreement gained the five items, entry 13 told the departments, and Jeremy pasted the new line into the project instructions: "To start a session: WELFARE. Read wakeup.md and follow it."
+- **The same slip, twice, by WELFARE:** two times written as 20:55 and 20:56 when the clock said 20:54 — a day after WELFARE wrote the rule. Both were caught before reaching the Mac. Knowing the rule isn't keeping it: the fix is to run `date` before writing any time.
+- Then the first washup (20:57: "okay that's it for tonight pls washup and say farewell").
+
+### What it adds up to
+- Existing chats can be brought up to date by handover alone, if the handover tells them their memory is stale and gives them their own work to do first. Every department's first act in the new scheme was a correction it made or received — the dialogue doing its job.
+- SMALL-C now has a way to stop and start that doesn't depend on any chat remembering anything: wash up into the oracle, wake up from it.
+
+Sources: this WELFARE conversation, 2026-10-28 20:22–21:12 and 2026-10-29 20:51–20:58; `dialogue.md` entries 1–13; `handover/2026-10-28-welfare-to-{sno,pcode,press}.md`; `handover/2026-10-29-synergy-to-small-c.md`; commits `bf0f349` to `434e00c`.
